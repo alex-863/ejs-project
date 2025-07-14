@@ -5,9 +5,9 @@ const app = express();
 
 app.set("view engine", "ejs")
 
-app.use((req, res) => {
-  res.render("index");
-});
+app.get("/", (req,res)=>{
+  res.send("server is working...");
+})
 
 let PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
